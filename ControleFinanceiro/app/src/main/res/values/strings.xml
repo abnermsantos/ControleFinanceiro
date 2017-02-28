@@ -1,3 +1,17 @@
 <resources>
+    <!-- Geral -->
     <string name="app_name">Controle Financeiro</string>
+
+    <!-- Mensagens de Erro-->
+    <string name="login_invalido">Login ou senha inválidos</string>
+    <string name="bd_erroAcesso">Erro ao acessar o Banco de Dados, tente novamente</string>
+    <string name="activity_erroAcesso">Erro ao mudar de tela. Estamos envergonhados</string>
+
+    <!-- Tela de Login -->
+    <string name="login_hint_usuario">Entre com seu usuário</string>
+    <string name="login_hint_senha">Digite sua senha</string>
+    <string name="login_entrar">Entrar</string>
+    <string name="login_novasenha">Esqueci minha senha</string>
+    <string name="login_salvarSenha">Salvar Senha</string>
+
 </resources>

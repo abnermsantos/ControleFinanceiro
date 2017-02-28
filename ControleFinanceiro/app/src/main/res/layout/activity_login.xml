@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.amssolucoes.controlefinanceiro.MainActivity">
+
+    <!-- Inserir imagens para tornar tela mais agradável -->
+    <!-- Centralizar botões e Textos na tela-->
+
+    <EditText
+        android:id="@+id/EdtUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_hint_usuario" />
+
+    <!-- Property "android:password="true"" is deprecated -->
+    <EditText
+        android:id="@+id/EdtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_hint_senha"
+        android:password="true"/>
+
+    <CheckBox
+        android:id="@+id/CbxSalvarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_salvarSenha"/>
+
+    <Button
+        android:id="@+id/BtnEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_entrar" />
+
+    <TextView
+        android:id="@+id/LblNovaSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_novasenha" />
+</LinearLayout>
