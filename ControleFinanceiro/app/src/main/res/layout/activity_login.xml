@@ -16,13 +16,12 @@
         android:layout_height="wrap_content"
         android:hint="@string/login_hint_usuario" />
 
-    <!-- Property "android:password="true"" is deprecated -->
     <EditText
         android:id="@+id/EdtSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_hint_senha"
-        android:password="true"/>
+        android:inputType="textPassword"/>
 
     <CheckBox
         android:id="@+id/CbxSalvarSenha"

@@ -8,7 +8,7 @@
     <string name="activity_erroAcesso">Erro ao mudar de tela. Estamos envergonhados</string>
 
     <!-- Tela de Login -->
-    <string name="login_hint_usuario">Entre com seu usuário</string>
+    <string name="login_hint_usuario">Entre com seu email</string>
     <string name="login_hint_senha">Digite sua senha</string>
     <string name="login_entrar">Entrar</string>
     <string name="login_novasenha">Esqueci minha senha</string>

@@ -20,8 +20,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     String usuario;
     String senha;
     Boolean salvarSenha;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
+    UsuarioCls usuarioCls;
 
     private void inicializaComponentes(){
         edtUsuario = (EditText) findViewById(R.id.EdtUsuario);
@@ -44,6 +43,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        usuarioCls = new UsuarioCls(this);
+        usuarioCls.open();
+
         inicializaComponentes();
     }
 
@@ -53,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         senha = edtSenha.getText().toString();
         salvarSenha = cbxSalvarSenha.isChecked();
 
-        if(checaLogin(usuario, senha)){
+        if(checaLogin(usuario, senha, salvarSenha)){
             try{
                 Intent cadastroIntent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(cadastroIntent);
@@ -67,33 +70,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private boolean checaLogin(String AsUsuario, String AsSenha){
-        boolean resultado = false;
-        //Verifica os dados no BD
-        //Se existe, salva o nome do usuário nas variáveis globais
-        // !!! Colocar o código do usuário nas preferencias compartilhadas para facilitar a busca
-        if (loginCorreto(AsUsuario, AsSenha)){
-            sharedPreferences = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-            editor = sharedPreferences.edit();
-            editor.putString("Usuario", AsUsuario);
-
-            resultado = true;
-        }
-        return resultado;
+    private boolean checaLogin(String AsUsuario, String AsSenha, boolean AbSalvarSenha){
+        return usuarioCls.LoginCorreto(AsUsuario, AsSenha, AbSalvarSenha);
     }
-
-    private boolean loginCorreto(String AsUsuario, String AsSenha){
-        boolean resultado = false;
-        try {
-            //Enquanto o banco não está implementado, testamos via hardcode
-            if(AsUsuario.equals("usuario") && AsSenha.equals("senha")){
-                resultado = true;
-            }
-        }catch (Exception e){
-            Toast.makeText(LoginActivity.this, R.string.bd_erroAcesso,
-                    Toast.LENGTH_SHORT).show();
-        }
-        return resultado;
-    }
-
 }
