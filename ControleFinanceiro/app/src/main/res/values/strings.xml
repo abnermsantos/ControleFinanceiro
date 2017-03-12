@@ -6,12 +6,30 @@
     <string name="login_invalido">Login ou senha inválidos</string>
     <string name="bd_erroAcesso">Erro ao acessar o Banco de Dados, tente novamente</string>
     <string name="activity_erroAcesso">Erro ao mudar de tela. Estamos envergonhados</string>
+    <string name="campos_obrigatorios">Campos obrigatórios: Email e Senha</string>
+    <string name="campos_obrigatorios_email">Campo obrigatório: Email</string>
+    <string name="email_invalido">Por favor digite um endereço de email válido</string>
+    <string name="usuario_existente">Já existe um usuário com este email cadastrado</string>
+    <string name="email_inexistente">Este email não está cadastrado no banco de dados</string>
+    <string name="usuario_nao_inserido">Ocorreu um erro, verifique os campos e tente novamente</string>
+    <string name="erro_update">Falha ao atualizar o Banco de Dados, tente novamente</string>
+    <string name="email_enviado">A nova senha foi enviada para o email cadastrado</string>
+    <string name="email_nao_enviado">Ocorreu um erro ao enviar a nova senha para o email</string>
+    <string name="verifique_conexao">Por favor, verifique sua conexão e tente novamente</string>
 
     <!-- Tela de Login -->
     <string name="login_hint_usuario">Entre com seu email</string>
     <string name="login_hint_senha">Digite sua senha</string>
-    <string name="login_entrar">Entrar</string>
     <string name="login_novasenha">Esqueci minha senha</string>
+    <string name="login_cadastro">Cadastre-se</string>
     <string name="login_salvarSenha">Salvar Senha</string>
+    <string name="login_hint_apelido">Como quer ser chamado</string>
 
+    <!-- Cadastros -->
+    <string name="cadastro_sucesso">Cadastro realizado com sucesso</string>
+
+    <!-- Botões -->
+    <string name="botao_entrar">Entrar</string>
+    <string name="botao_cadastrar">Cadastrar</string>
+    <string name="botao_enviar">Enviar</string>
 </resources>

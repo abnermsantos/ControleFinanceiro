@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="br.com.amssolucoes.controlefinanceiro.MainActivity">
+    tools:context="br.com.amssolucoes.controlefinanceiro.LoginActivity">
 
     <!-- Inserir imagens para tornar tela mais agradável -->
     <!-- Centralizar botões e Textos na tela-->
@@ -33,11 +33,17 @@
         android:id="@+id/BtnEntrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login_entrar" />
+        android:text="@string/botao_entrar" />
 
     <TextView
         android:id="@+id/LblNovaSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login_novasenha" />
+
+    <TextView
+        android:id="@+id/LblCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_cadastro" />
 </LinearLayout>
